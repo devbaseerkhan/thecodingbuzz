@@ -1,0 +1,29 @@
+@import "../../app/styles/mixins";
+
+.workSection {
+  padding: 3.75rem 0;
+  .title {
+    font-size: 6.25rem;
+    color: var(--label-text);
+    font-family: SourceCodePro700;
+    margin-bottom: 1.5rem;
+  }
+  .loadMore {
+    @include flex($direction: column, $justify: center, $align: unset);
+    position: relative;
+    height: 20px;
+    hr {
+      border-width: 6px;
+      border-radius: 5px;
+      opacity: 1;
+      margin: 0;
+    }
+    .arrowRight {
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translate(0, -50%);
+      font-size: 2.5rem;
+    }
+  }
+}

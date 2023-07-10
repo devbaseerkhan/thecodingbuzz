@@ -1,0 +1,43 @@
+@import "../../app/styles/mixins";
+
+.contactUs {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  background-color: var(--white);
+
+  h1 {
+    font-size: 8rem;
+    font-family: SpaceMono700;
+  }
+  .hStack {
+    justify-content: space-between;
+    margin-top: 2rem;
+    .formContent {
+      background-color: var(--danger);
+      padding: 1.5rem;
+    }
+    .contactDetails {
+      h3 {
+        font-size: 3rem;
+        font-family: SpaceMono700;
+        color: var(--danger);
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2rem;
+        li {
+          font-size: 1.75rem;
+          margin-bottom: 1.5rem;
+          cursor: pointer;
+          .icon {
+            margin-right: 1.5rem;
+          }
+          &:hover {
+            color: var(--danger);
+          }
+        }
+      }
+    }
+  }
+}

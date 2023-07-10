@@ -1,0 +1,45 @@
+@import "../../app/styles/mixins";
+
+.projectCard{
+    background-color: var(--label-text);
+    padding: 1.875rem;
+    border-radius: .875rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    .banner{
+        height: 100%;
+        width: 100%;
+        border-radius: .875rem;
+    }
+    .head{
+        @include flex($justify: space-between, $align: center);
+        .arrowDown{
+            font-size: 3rem;
+        }
+    }
+    p{
+        margin-top: .75rem;
+        margin-bottom: .75rem;
+        line-height: 2.125rem;
+        font-family: SplineSansMono400;
+    }
+    .fabIcons{
+        @include flex();
+        .fab{
+            @include square($size: 42px, $radius: 8px);
+            background-color: var(--dark);
+            margin-right: 1rem;
+            font-size: 1.75rem;
+            .react{
+                color: #61DAFB;
+            }
+            .js{
+                color: #F7DF1E;
+            }
+            .tailwind{
+                color: #06B6D4;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

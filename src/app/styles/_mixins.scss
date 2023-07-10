@@ -1,0 +1,206 @@
+/*--------------------///----------------------*/
+/*---         Pseudo Elements / Class       ---*/
+/*--------------------///----------------------*/
+/*---                Flex                   ---*/
+@mixin flex($display: flex, $direction: row, $justify: flex-start, $align: flex-start, $width: 100%) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    width: $width;
+  }
+  
+  /*--------------------///----------------------*/
+  /*---                Hover                  ---*/
+  @mixin btnActive {
+    &:not([checked]):active {
+      @content;
+    }
+  }
+  
+  @mixin hover($color: inherit, $bg: inherit) {
+    &:not([disabled]):hover {
+      @content;
+      color: $color;
+      background-color: $bg;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---               Active                  ---*/
+  @mixin active {
+    &:not([disabled]):active {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---                Focus                 ---*/
+  @mixin focus {
+    &:focus {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---               Visited                 ---*/
+  @mixin visited {
+    &:visited {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---                 Link                  ---*/
+  @mixin link {
+    &:link {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---                Befor                  ---*/
+  @mixin after {
+    &::after {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---                After                  ---*/
+  @mixin befor {
+    &::before {
+      @content;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---               Square                 ---*/
+  @mixin square($size, $radius: 0) {
+    position: relative;
+    width: $size;
+    height: $size;
+    min-width: $size;
+    min-height: $size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    // overflow: hidden;
+    @if $radius !=0 {
+      border-radius: $radius;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---              Mail Icon                ---*/
+  @mixin replace-text($image, $x: 50%, $y: 50%) {
+    overflow: hidden;
+    text-align: left;
+  
+    background: {
+      image: $image;
+      repeat: no-repeat;
+      position: $x, $y;
+      size: cover;
+    }
+  }
+  
+  /*--------------------///----------------------*/
+  /*---           Badge Outlined              ---*/
+  @mixin badgeOutLined ($color, $borderColor) {
+    height: 1.75rem;
+    width: max-content;
+    padding: .4rem .7rem;
+    background-color: transparent;
+    border: var(--base-border-thickness) solid var($borderColor);
+    color: var($color);
+  }
+  
+  /*--------------------///----------------------*/
+  /*---              C Button                ---*/
+  @mixin cBtn($bg: var(--primary),$color: var(--white), $border: 0, $padding: 8px 20px, $radius: 2px) {
+    @include flex($align: center, $justify: center);
+    position: relative;
+    box-sizing: border-box;
+    padding: $padding;
+    width: max-content;
+    border: $border;
+    border-radius: $radius;
+    cursor: pointer;
+    background-color: $bg;
+    color: $color;
+    transition: all 0.5s linear 0s;
+    overflow: hidden;
+    @include hover{
+      color: $color;
+      &::before {
+        content: "";
+        background-color: $bg;
+        opacity: .9;
+        // background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.5s linear 0s;
+      }
+    }
+    @include focus{
+      background-color: $bg;
+      color: $color;
+    }
+    @include active{
+      background-color: $bg;
+      color: $color;
+    }
+  }
+  
+  @mixin button($padding: .5rem 1.5rem, $border: none, $radius: 1rem, $bg: var(--primary), $color: var(--white)){
+    @include flex($align: center, $justify: center);
+    position: relative;
+    box-sizing: border-box;
+    padding: $padding;
+    border: $border;
+    border-radius: $radius;
+    background-color: $bg;
+    color: $color;
+    font-size: 1rem;
+    width: max-content;
+    max-width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bg;
+      border-radius: $radius;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(#F4A789, 15%);
+      transition: all .3s;
+      border-radius: $radius;
+      z-index: -1;
+    }
+    &:hover {
+      color: $color;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+  

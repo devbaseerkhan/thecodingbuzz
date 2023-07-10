@@ -1,0 +1,36 @@
+.appFooter{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    color: var(--white);
+    .hStack{
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            font-size: 2rem;
+            color: var(--danger);
+            font-family: SpaceMono700;
+            width: max-content;
+        }
+        p{
+            font-family: SourceCodePro600;
+            width: max-content;
+        }
+        ul{
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+            li{
+                width: max-content;
+                margin-left: 1.5rem;
+                cursor: pointer;
+                &:hover{
+                    color: var(--danger);
+                }
+            }
+        }
+    }
+}
