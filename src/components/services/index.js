@@ -35,7 +35,7 @@ function Services() {
         <h4>Services</h4>
         <Accordion defaultActiveKey="0">
           {data.map((item, ind) => (
-            <Accordion.Item eventKey={ind}>
+            <Accordion.Item eventKey={ind} key={ind}>
               <Accordion.Header>
                 <span>{item.no}</span>
                 {item.title}

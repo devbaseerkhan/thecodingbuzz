@@ -30,7 +30,7 @@ function ContactUs() {
         <h4 className="title24">Contact Us</h4>
         <h1>Lets Start the project Together</h1>
         <Row className={styles.hStack}>
-          <Col xs={5} className="mt-4">
+          <Col xs={12} md={5} className="mt-4">
             <div className={styles.formContent}>
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
@@ -127,7 +127,7 @@ function ContactUs() {
               </Form>
             </div>
           </Col>
-          <Col xs={6} className="mt-4">
+          <Col xs={12} md={7} lg={6} className="mt-4">
             <div className={styles.contactDetails}>
               <h3>Contact Details</h3>
               <ul>

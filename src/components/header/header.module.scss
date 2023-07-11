@@ -1,43 +1,78 @@
 @import "../../app/styles/mixins";
 
 .appHeader {
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: var(--white);
-  span {
-    display: flex;
-    align-items: center;
-    font-size: 2.125rem;
-    color: var(--danger);
-    margin-top: 1.875rem;
-    hr {
-      width: 3rem;
-      height: 3px;
-      background-color: var(--danger);
-      opacity: 1;
-      margin-right: 1rem;
+  .container {
+    @media screen and (max-width: 576px) {
+      @include flex($direction: column, $align: center, $justify: center);
+      height: 100%;
+      flex: 1;
+      text-align: center;
     }
-  }
-  .title {
-    display: flex;
-    align-items: flex-end;
-    h1 {
-      font-size: 9.375rem;
-      font-family: SpaceMono700;
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 2.125rem;
+      color: var(--danger);
+      margin-top: 1.875rem;
+      @media screen and (max-width: 335px) {
+        flex-direction: column;
+      }
+      hr {
+        width: 3rem;
+        height: 3px;
+        background-color: var(--danger);
+        opacity: 1;
+        margin-right: 1rem;
+      }
     }
-    .headerBtn {
-      @include square($size: 8rem, $radius: 100%);
-      background-color: var(--danger);
-      font-size: 2rem;
-      font-family: SourceCodePro600;
-      margin-bottom: 1.5rem;
+    .title {
+      h1 {
+        font-size: 9.375rem;
+        font-family: SpaceMono700;
+        @media screen and (max-width: 991.99px) {
+          font-size: 8rem;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 6rem;
+        }
+        @media screen and (max-width: 428px) {
+          font-size: 4.5rem;
+        }
+        .headerBtn {
+          @include square($size: 8rem, $radius: 100%);
+          background-color: var(--danger);
+          font-size: 2rem;
+          font-family: SourceCodePro600;
+          margin-top: 1.5rem;
+          float: right;
+          @media screen and (max-width: 576px){
+            float: unset;
+            min-height: 5rem;
+            height: 5rem;
+            width: 90%;
+            border-radius: 0;
+            margin: 1rem auto;
+          }
+        }
+      }
     }
-  }
-  .desc {
-    font-size: 1.5rem;
-    width: 40%;
+    .desc {
+      font-size: 1.5rem;
+      width: 40%;
+      margin-top: 1rem;
+      @media screen and (max-width: 991.99px) {
+        width: 60%;
+        margin-top: 2rem;
+      }
+      @media screen and (max-width: 428px) {
+        width: 80%;
+      }
+    }
   }
 }
 

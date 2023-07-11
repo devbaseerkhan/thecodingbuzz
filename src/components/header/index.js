@@ -34,13 +34,13 @@ const labels = [
 function AppHeader() {
   return (
     <div className={styles.appHeader}>
-      <Container>
+      <Container className={styles.container}>
         <span>
           <hr /> A Topnotch Software House
         </span>
         <div className={styles.title}>
-          <h1>Web and mobile Development.</h1>
-          <AppButton className={styles.headerBtn} title="Let’s Talk" />
+          <h1>Web and mobile Development. <AppButton className={styles.headerBtn} title="Let’s Talk" /></h1>
+          
         </div>
         <p className={styles.desc}>
           From ideation to implementation, we've got you covered.

@@ -69,19 +69,20 @@ export default function Home() {
       <div className={styles.content}>
         <Container>
           <Row className={styles.tabsContainer}>
-            <Col xs={3}>
+            <Col xs={12} md={3}>
               <h5 className="title24">Theory</h5>
               <div className={styles.btnGrid}>
                 {data.map((item, ind) => (
                   <AppButton
                     title={item.btnTitle}
+                    key={ind}
                     onClick={() => onClick?.(ind)}
-                    className="btn-light mt-2"
+                    className="btn-light my-2 me-2"
                   />
                 ))}
               </div>
             </Col>
-            <Col>
+            <Col xs={12} md={9}>
               <div>
                 <h3 className="title50">{data[userIndex].title}</h3>
                 <p className="desc16">{data[userIndex].desc}</p>
@@ -92,10 +93,10 @@ export default function Home() {
         <div className={styles.aboutUs}>
           <Container>
             <Row>
-              <Col xs={3}>
+              <Col xs={12} md={3}>
                 <h5 className="title24">About US</h5>
               </Col>
-              <Col>
+              <Col xs={12} md={9}>
                 <p className={styles.dtl}>
                   At <span>TheCodingBuzz,</span> we specialize in turning your{" "}
                   <span>digital dreams</span>
@@ -109,26 +110,26 @@ export default function Home() {
             </Row>
             <h5 className="title24 my-2">In Numbers</h5>
             <Row className={styles.NumbersSection}>
-              <Col xs={2}>
+              <Col xs={3} md={2}>
                 <div className={styles.numbers}>
                   <h1>200</h1>
                   <p>Projects</p>
                   <Image
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     src="/assets/images/add.png"
                     alt="plus-icon"
                     className={styles.addIcon}
                   />
                 </div>
               </Col>
-              <Col xs={2}>
+              <Col xs={3} md={2}>
                 <div className={styles.numbers}>
                   <h1>150</h1>
                   <p>Clients</p>
                   <Image
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     src="/assets/images/add.png"
                     alt="plus-icon"
                     className={styles.addIcon}
@@ -136,13 +137,13 @@ export default function Home() {
                 </div>
               </Col>
 
-              <Col xs={2}>
+              <Col xs={3} md={2}>
                 <div className={styles.numbers}>
                   <h1>05</h1>
                   <p>Experience</p>
                   <Image
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     src="/assets/images/add.png"
                     alt="plus-icon"
                     className={styles.addIcon}
@@ -158,19 +159,20 @@ export default function Home() {
       <div className={styles.testimonialsSection}>
         <Container>
           <Row className={styles.tabsContainer}>
-            <Col xs={3}>
-              <h5 className="title24">Testimonials</h5>
+            <Col xs={12} md={3}>
+              <h5 className="title23">Testimonials</h5>
               <div className={styles.btnGrid}>
                 {testimonialData.map((item, ind) => (
                   <AppButton
                     title={item.btnTitle}
                     onClick={() => onClick?.(ind)}
-                    className="btn-light mt-2"
+                    key={ind}
+                    className="btn-light my-2 me-2"
                   />
                 ))}
               </div>
             </Col>
-            <Col>
+            <Col xs={12} md={9}>
               <div className={styles.testimonialContent}>
                 <h3 className="title50">{testimonialData[testimonailIndex].title}</h3>
                 <p className={styles.projectName}>{testimonialData[testimonailIndex].project}</p>

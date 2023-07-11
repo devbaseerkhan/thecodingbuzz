@@ -11,10 +11,10 @@ export function ProjectCard() {
   return (
     <div className={styles.projectCard}>
       <Row>
-        <Col xs={4}>
+        <Col xs={12} md={4}>
           <Image src={product} alt="project-img" className={styles.banner} />
         </Col>
-        <Col>
+        <Col xs={12} md={8}>
           <div className={styles.head}>
             <h1 className="title50">Project Title</h1>
             <FiArrowDownRight className={styles.arrowDown} />
