@@ -64,7 +64,7 @@
     padding-bottom: 3.125rem;
     background-color: var(--danger);
     .tabsContainer {
-      h5 {
+      h1 {
         color: var(--info);
       }
       .btnGrid {
@@ -77,20 +77,24 @@
       }
       .testimonialContent {
         color: var(--white);
+        h1 {
+          color: var(--white);
+        }
         .projectName {
           font-size: 1.125rem;
+          color: #F0F0F0;
         }
         .desc {
           font-size: 2rem;
           margin-top: 2rem;
-          @media screen and (max-width: 767.5px){
+          @media screen and (max-width: 767.5px) {
             font-size: 1.5rem;
           }
           .descIcon {
             width: 9rem;
             margin-right: 2rem;
             float: left;
-            @media screen and (max-width: 767.5px){
+            @media screen and (max-width: 767.5px) {
               height: 6rem;
               width: 6rem;
               margin-right: 1rem;

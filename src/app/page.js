@@ -175,7 +175,7 @@ export default function Home() {
             <Col xs={12} md={9}>
               <div className={styles.testimonialContent}>
                 <h1 className="title50">{testimonialData[testimonailIndex].title}</h1>
-                <h6 className={styles.projectName}>{testimonialData[testimonailIndex].project}</h6>
+                <p className={styles.projectName}>{testimonialData[testimonailIndex].project}</p>
                 <p className={styles.desc}><Image src={vector} alt="vector-icon" className={styles.descIcon} />{testimonialData[testimonailIndex].desc}</p>
               </div>
             </Col>
