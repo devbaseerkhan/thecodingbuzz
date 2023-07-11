@@ -32,7 +32,7 @@ function Services() {
   return (
     <div className="services">
       <Container>
-        <h4>Services</h4>
+        <h1>Services</h1>
         <Accordion defaultActiveKey="0">
           {data.map((item, ind) => (
             <Accordion.Item eventKey={ind} key={ind}>

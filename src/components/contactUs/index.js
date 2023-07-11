@@ -27,8 +27,8 @@ function ContactUs() {
   return (
     <div className={styles.contactUs}>
       <Container>
-        <h4 className="title24">Contact Us</h4>
-        <h1>Lets Start the project Together</h1>
+        <h1 className="title24">Contact Us</h1>
+        <h2>Lets Start the project Together</h2>
         <Row className={styles.hStack}>
           <Col xs={12} md={5} className="mt-4">
             <div className={styles.formContent}>
@@ -132,19 +132,19 @@ function ContactUs() {
               <h3>Contact Details</h3>
               <ul>
                 <li>
-                  <a>
+                  <a href="www.team@thecodingbuzz.com">
                     <MdOutlineAlternateEmail className={styles.icon} />
                     team@thecodingbuzz.com
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="+92 344 1926270">
                     <BsTelephone className={styles.icon} />
                     +92 344 1926270
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="www.linkedin.com/thecodingbuzz">
                     <AiFillLinkedin className={styles.icon} />
                     www.linkedin.com/thecodingbuzz
                   </a>

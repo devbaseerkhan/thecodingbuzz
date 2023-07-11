@@ -70,7 +70,7 @@ export default function Home() {
         <Container>
           <Row className={styles.tabsContainer}>
             <Col xs={12} md={3}>
-              <h5 className="title24">Theory</h5>
+              <h1 className="title24">Theory</h1>
               <div className={styles.btnGrid}>
                 {data.map((item, ind) => (
                   <AppButton
@@ -84,7 +84,7 @@ export default function Home() {
             </Col>
             <Col xs={12} md={9}>
               <div>
-                <h3 className="title50">{data[userIndex].title}</h3>
+                <h1 className="title50">{data[userIndex].title}</h1>
                 <p className="desc16">{data[userIndex].desc}</p>
               </div>
             </Col>
@@ -94,7 +94,7 @@ export default function Home() {
           <Container>
             <Row>
               <Col xs={12} md={3}>
-                <h5 className="title24">About US</h5>
+                <h1 className="title24">About US</h1>
               </Col>
               <Col xs={12} md={9}>
                 <p className={styles.dtl}>
@@ -108,7 +108,7 @@ export default function Home() {
                 </p>
               </Col>
             </Row>
-            <h5 className="title24 my-2">In Numbers</h5>
+            <h1 className="title24 my-2">In Numbers</h1>
             <Row className={styles.NumbersSection}>
               <Col xs={3} md={2}>
                 <div className={styles.numbers}>
@@ -160,7 +160,7 @@ export default function Home() {
         <Container>
           <Row className={styles.tabsContainer}>
             <Col xs={12} md={3}>
-              <h5 className="title23">Testimonials</h5>
+              <h1 className="title24">Testimonials</h1>
               <div className={styles.btnGrid}>
                 {testimonialData.map((item, ind) => (
                   <AppButton
@@ -174,8 +174,8 @@ export default function Home() {
             </Col>
             <Col xs={12} md={9}>
               <div className={styles.testimonialContent}>
-                <h3 className="title50">{testimonialData[testimonailIndex].title}</h3>
-                <p className={styles.projectName}>{testimonialData[testimonailIndex].project}</p>
+                <h1 className="title50">{testimonialData[testimonailIndex].title}</h1>
+                <h6 className={styles.projectName}>{testimonialData[testimonailIndex].project}</h6>
                 <p className={styles.desc}><Image src={vector} alt="vector-icon" className={styles.descIcon} />{testimonialData[testimonailIndex].desc}</p>
               </div>
             </Col>
