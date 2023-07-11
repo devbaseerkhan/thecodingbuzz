@@ -43,7 +43,7 @@ function AppHeader() {
           
         </div>
         <p className={styles.desc}>
-          From ideation to implementation, we've got you covered.
+          From ideation to implementation, we&apos;ve got you covered.
         </p>
         <Image src={poke} alt="down-img" width={48} />
       </Container>
