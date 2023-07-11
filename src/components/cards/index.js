@@ -19,7 +19,7 @@ export function ProjectCard() {
             <h1 className="title50">Project Title</h1>
             <FiArrowDownRight className={styles.arrowDown} />
           </div>
-          <p>
+          <p className="desc16">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis
             tellus at eros tempus aliquam. Nullam nisl erat, lacinia ut justo
             et, pharetra convallis erat. In sit amet enim risus. Suspendisse ac

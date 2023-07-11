@@ -40,7 +40,7 @@ function Services() {
                 <span>{item.no}</span>
                 {item.title}
               </Accordion.Header>
-              <Accordion.Body>{item.desc}</Accordion.Body>
+              <Accordion.Body><p className="desc16">{item.desc}</p></Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>
