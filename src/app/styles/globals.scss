@@ -2,31 +2,31 @@
 
 @font-face {
   font-family: SourceCodePro400;
-  src: url("../../../public/assets/fonts/SourceCodePro-Regular.ttf");
+  src: url("../../../public/fonts/SourceCodePro-Regular.ttf");
 }
 @font-face {
   font-family: SourceCodePro500;
-  src: url("../../../public/assets/fonts/SourceCodePro-Medium.ttf");
+  src: url("../../../public/fonts/SourceCodePro-Medium.ttf");
 }
 @font-face {
   font-family: SourceCodePro600;
-  src: url("../../../public/assets/fonts/SourceCodePro-SemiBold.ttf");
+  src: url("../../../public/fonts/SourceCodePro-SemiBold.ttf");
 }
 @font-face {
   font-family: SourceCodePro700;
-  src: url("../../../public/assets/fonts/SourceCodePro-Bold.ttf");
+  src: url("../../../public/fonts/SourceCodePro-Bold.ttf");
 }
 @font-face {
   font-family: SpaceMono400;
-  src: url("../../../public/assets/fonts/SpaceMono-Regular.ttf");
+  src: url("../../../public/fonts/SpaceMono-Regular.ttf");
 }
 @font-face {
   font-family: SpaceMono700;
-  src: url("../../../public/assets/fonts/SpaceMono-Bold.ttf");
+  src: url("../../../public/fonts/SpaceMono-Bold.ttf");
 }
 @font-face {
   font-family: SplineSansMono400;
-  src: url("../../../public/assets/fonts/SplineSansMono-Regular.ttf");
+  src: url("../../../public/fonts/SplineSansMono-Regular.ttf");
 }
 :root {
   --danger: #fe6313;
@@ -59,8 +59,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   color: var(--dark);
-  background-color: var(--dark-shade);
-  font-family: "SpaceMono400";
+  background-color: var(--white);
+  // font-family: "SpaceMono400";
 }
 
 @media screen and (max-width: 1320px) {
@@ -204,6 +204,7 @@ a {
 .services {
   padding-top: 3.25rem;
   padding-bottom: 3.25rem;
+  background-color: var(--dark-shade);
   color: var(--white);
   h1 {
     font-size: 1.5rem;

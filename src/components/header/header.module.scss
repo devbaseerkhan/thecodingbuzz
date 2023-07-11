@@ -1,111 +1,113 @@
 @import "../../app/styles/mixins";
 
 .appHeader {
-  min-height: calc(100vh - 70px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: var(--white);
-  .container {
-    @media screen and (max-width: 576px) {
-      @include flex($direction: column, $align: center, $justify: center);
-      height: 100%;
-      flex: 1;
-      text-align: center;
-    }
-    span {
-      display: flex;
-      align-items: center;
-      font-size: 2.125rem;
-      color: var(--danger);
-      margin-top: 1.875rem;
-      @media screen and (max-width: 335px) {
-        flex-direction: column;
+  background-color: var(--dark-shade);
+  .content {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+
+    .container {
+      @media screen and (max-width: 576px) {
+        @include flex($direction: column, $align: center, $justify: center);
+        height: 100%;
+        flex: 1;
+        text-align: center;
       }
-      hr {
-        width: 3rem;
-        height: 3px;
-        background-color: var(--danger);
-        opacity: 1;
-        margin-right: 1rem;
-      }
-    }
-    .title {
-      h1 {
-        font-size: 9.375rem;
-        font-family: SpaceMono700;
-        @media screen and (max-width: 991.99px) {
-          font-size: 8rem;
+      span {
+        display: flex;
+        align-items: center;
+        font-size: 2.125rem;
+        color: var(--danger);
+        margin-top: 1.875rem;
+        @media screen and (max-width: 335px) {
+          flex-direction: column;
         }
-        @media screen and (max-width: 767px) {
-          font-size: 6rem;
-        }
-        @media screen and (max-width: 428px) {
-          font-size: 4.5rem;
-        }
-        .headerBtn {
-          @include square($size: 8rem, $radius: 100%);
+        hr {
+          width: 3rem;
+          height: 3px;
           background-color: var(--danger);
-          font-size: 2rem;
-          font-family: SourceCodePro600;
-          margin-top: 1.5rem;
-          float: right;
-          @media screen and (max-width: 576px){
-            float: unset;
-            min-height: 5rem;
-            height: 5rem;
-            width: 90%;
-            border-radius: 0;
-            margin: 1rem auto;
+          opacity: 1;
+          margin-right: 1rem;
+        }
+      }
+      .title {
+        h1 {
+          font-size: 9.375rem;
+          font-family: SpaceMono700;
+          @media screen and (max-width: 991.99px) {
+            font-size: 8rem;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 6rem;
+          }
+          @media screen and (max-width: 428px) {
+            font-size: 4.5rem;
+          }
+          .headerBtn {
+            @include square($size: 8rem, $radius: 100%);
+            background-color: var(--danger);
+            font-size: 2rem;
+            font-family: SourceCodePro600;
+            margin-top: 1.5rem;
+            float: right;
+            @media screen and (max-width: 576px) {
+              float: unset;
+              min-height: 5rem;
+              height: 5rem;
+              width: 90%;
+              border-radius: 0;
+              margin: 1rem auto;
+            }
           }
         }
       }
-    }
-    .desc {
-      font-size: 1.5rem;
-      width: 40%;
-      margin-top: 1rem;
-      @media screen and (max-width: 991.99px) {
-        width: 60%;
-        margin-top: 2rem;
+      .desc {
+        font-size: 1.5rem;
+        width: 40%;
+        margin-top: 1rem;
+        @media screen and (max-width: 991.99px) {
+          width: 60%;
+          margin-top: 2rem;
+        }
+        @media screen and (max-width: 428px) {
+          width: 80%;
+        }
       }
-      @media screen and (max-width: 428px) {
-        width: 80%;
-      }
     }
-  }
-}
-
-.horizontalSlider {
-  display: flex;
-  align-items: center;
-  background-color: var(--dark);
-  padding: 1.5rem 0;
-  margin-top: 1rem;
-  .inner {
-    position: relative;
-    width: 200%;
-    height: 60px;
-    overflow: hidden;
-    .animate {
-      position: absolute;
-      width: 200%;
-      height: 60px;
+    .horizontalSlider {
       display: flex;
       align-items: center;
-      @keyframes scroll {
-        0% {
-          left: 0;
-        }
-        100% {
-          left: -100%;
+      background-color: var(--dark);
+      padding: 1.5rem 0;
+      margin-top: 1rem;
+      .inner {
+        position: relative;
+        width: 200%;
+        height: 60px;
+        overflow: hidden;
+        .animate {
+          position: absolute;
+          width: 200%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          @keyframes scroll {
+            0% {
+              left: 0;
+            }
+            100% {
+              left: -100%;
+            }
+          }
+          animation: scroll 15s linear infinite;
         }
       }
-      animation: scroll 15s linear infinite;
     }
   }
 }
-
 .slide {
   display: flex;
   align-items: center;

@@ -1,0 +1,17 @@
+@import "../../app/styles/mixins";
+
+.content {
+    background-color: var(--white);
+    .tabsContainer {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      .btnGrid {
+        margin-top: 3rem;
+        @media screen and (max-width: 767.5px) {
+          @include flex();
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
